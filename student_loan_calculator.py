@@ -107,7 +107,7 @@ def CalculateMonthlyInterestRate (first_year_salary, salary_increase_rate, avera
             monthly_rate = ((1 + yearly_rate) ** (1 / MONTHS)-1) * 100
             monthly_interest_rate_list.append(round(monthly_rate, 4))
         
-        elif LOWEST_RATE < salary < LOWEST_RATE:
+        elif LOWEST_RATE < salary < HIGHEST_RATE:
             added_rate = ((salary - LOWEST_RATE) / (HIGHEST_RATE - LOWEST_RATE)) *  MAXIMUM_ADDED_INTEREST_RATE        
             # the added interest rate has a linear relation with the salary.             
             yearly_rate = average_inflation / 100 + added_rate / 100
